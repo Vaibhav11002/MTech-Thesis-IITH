@@ -38,10 +38,9 @@ class KalmanFilter(object):
         self._Q = tf.constant(Q, dtype=tf.float32, name="Q")
         self._H = tf.constant(H, dtype=tf.float32, name="H")
 
-        self._u = tf.placeholder(dtype=tf.float32, shape=[l, 1], name="u")
-
-        self._z = tf.placeholder(dtype=tf.float32, shape=[m, 1], name="z")
-        self._R = tf.placeholder(dtype=tf.float32, shape=[m, m], name="R")
+        self._u = tf.Variable(dtype=tf.float32, shape=[l, 1], name="u")
+        self._z = tf.Variable(dtype=tf.float32, shape=[m, 1], name="z")
+        self._R = tf.Variable(dtype=tf.float32, shape=[m, m], name="R")
 
 
     # returns
