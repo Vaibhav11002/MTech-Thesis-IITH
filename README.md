@@ -1,3 +1,3 @@
 # MTech-Thesis-IITH
-Thesis work
-Stores codes, articles links, reference codes, log files, python notebooks, etc.
+Thesis work on Time Series Prediction and AE based Image Compression. //
+Codes, articles links, reference code, python notebooks, etc.
