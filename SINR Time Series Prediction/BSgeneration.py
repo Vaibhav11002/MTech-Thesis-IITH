@@ -8,7 +8,7 @@ class BSGenerate:
         self.radius = radius
 
     def tier1cellgen(self):
-        #radius = 500
+        #self.radius = 500
 
         t = np.linspace(0, 2*math.pi, 7)
 
@@ -16,8 +16,8 @@ class BSGenerate:
         x1 = []
         y1 = []
         for i in range(len(t)):
-            x1.append(0 + radius*math.cos(t[i]))
-            y1.append(0 + radius*math.sin(t[i]))
+            x1.append(0 + self.radius*math.cos(t[i]))
+            y1.append(0 + self.radius*math.sin(t[i]))
 
         c_x1 = 0  #BS Location Center Cell x-axis
         c_y1 = 0 #BS Location Center Cell y-axis
@@ -27,66 +27,66 @@ class BSGenerate:
         x2 = []
         y2 = [] 
         for i in range(len(t)):
-            x2.append(0+radius*math.cos(t[i]))
-            y2.append(((math.sqrt(3)/2)*2*radius) + (radius*math.sin(t[i])))
+            x2.append(0+self.radius*math.cos(t[i]))
+            y2.append(((math.sqrt(3)/2)*2*self.radius) + (self.radius*math.sin(t[i])))
 
         c_x2 = 0  #BS Location Upper Cell x-axis
-        c_y2 = ((math.sqrt(3)/2)*2*radius) #BS Location Upper Cell y-axis
+        c_y2 = ((math.sqrt(3)/2)*2*self.radius) #BS Location Upper Cell y-axis
 
 
         #lower cell
         x3 = []
         y3 = []
         for i in range(len(t)):
-            x3.append(0+radius*math.cos(t[i]))
-            y3.append(-((math.sqrt(3)/2)*2*radius) + (radius*math.sin(t[i])))
+            x3.append(0+self.radius*math.cos(t[i]))
+            y3.append(-((math.sqrt(3)/2)*2*self.radius) + (self.radius*math.sin(t[i])))
 
         c_x3 = 0  #BS Location Lower Cell x-axis
-        c_y3 = -((math.sqrt(3)/2)*2*radius) #BS Location Lower Cell y-axis
+        c_y3 = -((math.sqrt(3)/2)*2*self.radius) #BS Location Lower Cell y-axis
 
 
         #right upper cell
         x4 = []
         y4 = []
         for i in range(len(t)):
-            x4.append((radius+(radius/2)) + radius*math.cos(t[i]))
-            y4.append(((math.sqrt(3)/2)*radius) + (radius*math.sin(t[i])))
+            x4.append((self.radius+(self.radius/2)) + self.radius*math.cos(t[i]))
+            y4.append(((math.sqrt(3)/2)*self.radius) + (self.radius*math.sin(t[i])))
 
-        c_x4 = (radius+(radius/2))  #BS Location right upper Cell x-axis
-        c_y4 = ((math.sqrt(3)/2)*radius) #BS Location right upper Cell y-axis
+        c_x4 = (self.radius+(self.radius/2))  #BS Location right upper Cell x-axis
+        c_y4 = ((math.sqrt(3)/2)*self.radius) #BS Location right upper Cell y-axis
 
 
         #%Right Lower cell
         x5 = []
         y5 = []
         for i in range(len(t)):
-            x5.append((radius+(radius/2)) + radius*math.cos(t[i]))
-            y5.append(-((math.sqrt(3)/2)*radius) + (radius*math.sin(t[i])))
+            x5.append((self.radius+(self.radius/2)) + self.radius*math.cos(t[i]))
+            y5.append(-((math.sqrt(3)/2)*self.radius) + (self.radius*math.sin(t[i])))
 
-        c_x5 = (radius+(radius/2))  #BS Location right lower Cell x-axis
-        c_y5 = -((math.sqrt(3)/2)*radius) #BS Location right lower Cell y-axis
+        c_x5 = (self.radius+(self.radius/2))  #BS Location right lower Cell x-axis
+        c_y5 = -((math.sqrt(3)/2)*self.radius) #BS Location right lower Cell y-axis
 
 
         #%Left Upper cell
         x6 = []
         y6 = []
         for i in range(len(t)):
-            x6.append(-(radius+(radius/2)) + radius*math.cos(t[i]))
-            y6.append(((math.sqrt(3)/2)*radius) + (radius*math.sin(t[i])))
+            x6.append(-(self.radius+(self.radius/2)) + self.radius*math.cos(t[i]))
+            y6.append(((math.sqrt(3)/2)*self.radius) + (self.radius*math.sin(t[i])))
 
-        c_x6 = -(radius+(radius/2))  #BS Location Left upper x-axis
-        c_y6 = ((math.sqrt(3)/2)*radius) #BS Location Left upper y-axis
+        c_x6 = -(self.radius+(self.radius/2))  #BS Location Left upper x-axis
+        c_y6 = ((math.sqrt(3)/2)*self.radius) #BS Location Left upper y-axis
 
 
         #left lower cell
         x7 = []
         y7 = []
         for i in range(len(t)):
-            x7.append(-(radius+(radius/2)) + radius*math.cos(t[i]))
-            y7.append(-((math.sqrt(3)/2)*radius) + (radius*math.sin(t[i])))
+            x7.append(-(self.radius+(self.radius/2)) + self.radius*math.cos(t[i]))
+            y7.append(-((math.sqrt(3)/2)*self.radius) + (self.radius*math.sin(t[i])))
 
-        c_x7 = -(radius+(radius/2)) #BS Location left lower Cell x-axis
-        c_y7 = -((math.sqrt(3)/2)*radius) #BS Location left lower Cell y-axis
+        c_x7 = -(self.radius+(self.radius/2)) #BS Location left lower Cell x-axis
+        c_y7 = -((math.sqrt(3)/2)*self.radius) #BS Location left lower Cell y-axis
 
 
         BS_locations_x = [c_x1, c_x2, c_x3, c_x4, c_x5, c_x6, c_x7]    #centre, up, low, right up, right low, left up, left low
@@ -103,28 +103,28 @@ class BSGenerate:
         #print("ISD: ", ISD)
 
         # 2nd cell
-        isd = math.sqrt(3)*radius
-        BS2x = [x + (-3*radius) for x in BS_locations_x]
+        isd = math.sqrt(3)*self.radius
+        BS2x = [x + (-3*self.radius) for x in BS_locations_x]
         BS2y = [y + (2*isd) for y in BS_locations_y]
 
         #3rd
-        BS3x = [x + (1.5*radius) for x in BS_locations_x]
+        BS3x = [x + (1.5*self.radius) for x in BS_locations_x]
         BS3y = [y + (2.5*isd) for y in BS_locations_y]
 
         #4th
-        BS4x = [x + (4.5*radius) for x in BS_locations_x]
+        BS4x = [x + (4.5*self.radius) for x in BS_locations_x]
         BS4y = [y + (0.5*isd) for y in BS_locations_y]
 
         #5th
-        BS5x = [x + (3*radius) for x in BS_locations_x]
+        BS5x = [x + (3*self.radius) for x in BS_locations_x]
         BS5y = [y + (-2*isd) for y in BS_locations_y]
 
         #6th
-        BS6x = [x + (-1.5*radius) for x in BS_locations_x]
+        BS6x = [x + (-1.5*self.radius) for x in BS_locations_x]
         BS6y = [y + (-2.5*isd) for y in BS_locations_y]
 
         #7th
-        BS7x = [x + (-4.5*radius) for x in BS_locations_x]
+        BS7x = [x + (-4.5*self.radius) for x in BS_locations_x]
         BS7y = [y + (-0.5*isd) for y in BS_locations_y]
 
         BS_total_x = [BS_locations_x, BS2x, BS3x, BS4x, BS5x, BS6x, BS7x]
