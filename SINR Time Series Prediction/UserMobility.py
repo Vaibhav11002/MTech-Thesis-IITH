@@ -1,11 +1,13 @@
+from cmath import sqrt
 import numpy as np
 import matplotlib.pyplot as plt
 import math
 import random
+import BSgeneration
 
 #Random Waypoint Model
-def User_Mobility(total_user, xs, ys, v_min, v_max, Time_instants):
-
+def User_Mobility(radius, total_user, xs, ys, v_min, v_max, Time_instants):
+  isd = 0.5*sqrt(3)*radius
   # range of x and y coordinates for user mobility
   x_min = -2.25*radius
   x_max = 2.25*radius
@@ -57,7 +59,7 @@ def User_Mobility(total_user, xs, ys, v_min, v_max, Time_instants):
       x_previous = x_pos[i,t]
       y_previous = y_pos[i,t]
 
-    
+
   x_mobile = np.transpose(x_pos) #time_instants x total_users
   y_mobile = np.transpose(y_pos)
 
