@@ -1,9 +1,7 @@
-from cmath import sqrt
 import numpy as np
 import matplotlib.pyplot as plt
 import math
 import random
-import BSgeneration
 
 #Random Waypoint Model
 def User_Mobility(radius, total_user, xs, ys, v_min, v_max, Time_instants):

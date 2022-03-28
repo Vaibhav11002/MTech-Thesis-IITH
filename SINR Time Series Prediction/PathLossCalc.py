@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import math
 import random
 
-def getdist(n_users,x,y, time_instants):
+def getdist(n_users,x,y, time_instants, BS_wrap_around_total3x, BS_wrap_around_total3y):
   h_bs = 25 #m
   h_ut = 1.5 #m
   h = 5 #avg building height
