@@ -134,24 +134,24 @@ class BSGenerate:
         return X, Y, BS_total_x, BS_total_y
 
 
-def WrapAround(self):
+    def WrapAround(self):
 
-    BS_wrap_around_x = sum(self.BS_total_x, [])
-    BS_wrap_around_y = sum(self.BS_total_y, [])
+        BS_wrap_around_x = sum(self.BS_total_x, [])
+        BS_wrap_around_y = sum(self.BS_total_y, [])
 
-    BS_wrap_around_total3x = []
-    for i in BS_wrap_around_x:
-        for j in range(3):
-            BS_wrap_around_total3x.append(i)
+        BS_wrap_around_total3x = []
+        for i in BS_wrap_around_x:
+            for j in range(3):
+                BS_wrap_around_total3x.append(i)
 
-    BS_wrap_around_total3y = []
-    for i in BS_wrap_around_y:
-        for j in range(3):
-            BS_wrap_around_total3y.append(i)
+        BS_wrap_around_total3y = []
+        for i in BS_wrap_around_y:
+            for j in range(3):
+                BS_wrap_around_total3y.append(i)
 
-    BS_cor_x = np.array(BS_wrap_around_total3x)
-    BS_cor_y = np.array(BS_wrap_around_total3y)
+        BS_cor_x = np.array(BS_wrap_around_total3x)
+        BS_cor_y = np.array(BS_wrap_around_total3y)
 
-    return BS_wrap_around_total3x, BS_wrap_around_total3y
+        return BS_wrap_around_total3x, BS_wrap_around_total3y
 
     
