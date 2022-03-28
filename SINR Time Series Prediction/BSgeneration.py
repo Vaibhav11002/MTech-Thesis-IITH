@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 import random
-import pandas as pd
 
 
 def BSGenplusWrap(radius):
@@ -144,12 +143,10 @@ def BSGenplusWrap(radius):
     BS_cor_x = np.array(BS_wrap_around_total3x)
     BS_cor_y = np.array(BS_wrap_around_total3y)
 
-    return BS_wrap_around_total3x, BS_wrap_around_total3y
+    return BS_locations_x, BS_locations_y, BS_wrap_around_total3x, BS_wrap_around_total3y
 
 
 if __name__ == '__main__' :
     radius = 500
     BSGenplusWrap(radius)
-
-
 
