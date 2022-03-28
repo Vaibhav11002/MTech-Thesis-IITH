@@ -6,6 +6,11 @@ import random
 class BSGenerate:
     def __init__(self, radius):
         self.radius = radius
+        self.BS_total_x = None
+        self.BS_total_y = None
+        self.BS_location_x = None
+        self.BS_location_y = None
+
 
     def tier1cellgen(self):
         #self.radius = 500
@@ -89,8 +94,8 @@ class BSGenerate:
         c_y7 = -((math.sqrt(3)/2)*self.radius) #BS Location left lower Cell y-axis
 
 
-        BS_locations_x = [c_x1, c_x2, c_x3, c_x4, c_x5, c_x6, c_x7]    #centre, up, low, right up, right low, left up, left low
-        BS_locations_y = [c_y1, c_y2, c_y3, c_y4, c_y5, c_y6, c_y7]
+        self.BS_location_x = [c_x1, c_x2, c_x3, c_x4, c_x5, c_x6, c_x7]    #centre, up, low, right up, right low, left up, left low
+        self.BS = [c_y1, c_y2, c_y3, c_y4, c_y5, c_y6, c_y7]
 
         X =np.array([x1,x2,x3,x4,x5,x6,x7])
         Y =np.array([y1,y2,y3,y4,y5,y6,y7])
@@ -104,34 +109,34 @@ class BSGenerate:
 
         # 2nd cell
         isd = math.sqrt(3)*self.radius
-        BS2x = [x + (-3*self.radius) for x in BS_locations_x]
-        BS2y = [y + (2*isd) for y in BS_locations_y]
+        BS2x = [x + (-3*self.radius) for x in self.BS_location_x]
+        BS2y = [y + (2*isd) for y in self.BS_locations_y]
 
         #3rd
-        BS3x = [x + (1.5*self.radius) for x in BS_locations_x]
-        BS3y = [y + (2.5*isd) for y in BS_locations_y]
+        BS3x = [x + (1.5*self.radius) for x in self.BS_location_x]
+        BS3y = [y + (2.5*isd) for y in self.BS_locations_y]
 
         #4th
-        BS4x = [x + (4.5*self.radius) for x in BS_locations_x]
-        BS4y = [y + (0.5*isd) for y in BS_locations_y]
+        BS4x = [x + (4.5*self.radius) for x in self.BS_location_x]
+        BS4y = [y + (0.5*isd) for y in self.BS_locations_y]
 
         #5th
-        BS5x = [x + (3*self.radius) for x in BS_locations_x]
-        BS5y = [y + (-2*isd) for y in BS_locations_y]
+        BS5x = [x + (3*self.radius) for x in self.BS_location_x]
+        BS5y = [y + (-2*isd) for y in self.BS_locations_y]
 
         #6th
-        BS6x = [x + (-1.5*self.radius) for x in BS_locations_x]
-        BS6y = [y + (-2.5*isd) for y in BS_locations_y]
+        BS6x = [x + (-1.5*self.radius) for x in self.BS_location_x]
+        BS6y = [y + (-2.5*isd) for y in self.BS_locations_y]
 
         #7th
-        BS7x = [x + (-4.5*self.radius) for x in BS_locations_x]
-        BS7y = [y + (-0.5*isd) for y in BS_locations_y]
+        BS7x = [x + (-4.5*self.radius) for x in self.BS_location_x]
+        BS7y = [y + (-0.5*isd) for y in self.BS_locations_y]
 
-        BS_total_x = [BS_locations_x, BS2x, BS3x, BS4x, BS5x, BS6x, BS7x]
-        BS_total_y = [BS_locations_y, BS2y, BS3y, BS4y, BS5y, BS6y, BS7y]
+        self.BS_total_x = [self.BS_location_x, BS2x, BS3x, BS4x, BS5x, BS6x, BS7x]
+        self.BS_total_y = [self.BS_locations_y, BS2y, BS3y, BS4y, BS5y, BS6y, BS7y]
 
 
-        return X, Y, BS_total_x, BS_total_y
+        return X, Y
 
 
     def WrapAround(self):
