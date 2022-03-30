@@ -110,30 +110,30 @@ class BSGenerate:
         # 2nd cell
         isd = math.sqrt(3)*self.radius
         BS2x = [x + (-3*self.radius) for x in self.BS_location_x]
-        BS2y = [y + (2*isd) for y in self.BS_locations_y]
+        BS2y = [y + (2*isd) for y in self.BS_location_y]
 
         #3rd
         BS3x = [x + (1.5*self.radius) for x in self.BS_location_x]
-        BS3y = [y + (2.5*isd) for y in self.BS_locations_y]
+        BS3y = [y + (2.5*isd) for y in self.BS_location_y]
 
         #4th
         BS4x = [x + (4.5*self.radius) for x in self.BS_location_x]
-        BS4y = [y + (0.5*isd) for y in self.BS_locations_y]
+        BS4y = [y + (0.5*isd) for y in self.BS_location_y]
 
         #5th
         BS5x = [x + (3*self.radius) for x in self.BS_location_x]
-        BS5y = [y + (-2*isd) for y in self.BS_locations_y]
+        BS5y = [y + (-2*isd) for y in self.BS_location_y]
 
         #6th
         BS6x = [x + (-1.5*self.radius) for x in self.BS_location_x]
-        BS6y = [y + (-2.5*isd) for y in self.BS_locations_y]
+        BS6y = [y + (-2.5*isd) for y in self.BS_location_y]
 
         #7th
         BS7x = [x + (-4.5*self.radius) for x in self.BS_location_x]
-        BS7y = [y + (-0.5*isd) for y in self.BS_locations_y]
+        BS7y = [y + (-0.5*isd) for y in self.BS_location_y]
 
         self.BS_total_x = [self.BS_location_x, BS2x, BS3x, BS4x, BS5x, BS6x, BS7x]
-        self.BS_total_y = [self.BS_locations_y, BS2y, BS3y, BS4y, BS5y, BS6y, BS7y]
+        self.BS_total_y = [self.BS_location_y, BS2y, BS3y, BS4y, BS5y, BS6y, BS7y]
 
 
         return X, Y

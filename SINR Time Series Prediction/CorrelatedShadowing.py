@@ -3,10 +3,14 @@ import matplotlib.pyplot as plt
 import math
 import random
 
-def correlated_shadowing(x_mobile, y_mobile, sigma_shd):
+def correlated_shadowing(x_mobile, y_mobile, sigma_shd, BS_total_x, BS_total_y):
     bs_wrap = 49
     D_cor = 100
     #sigma_shd = 100 #dB
+
+    BS_cords = np.concatenate((BS_total_x, BS_total_y), axis=0)
+    BS_cords = BS_cords.reshape(2, -1) 
+
     
     Dist_bs = np.zeros((bs_wrap, bs_wrap))
     Corr_bs = np.zeros(np.shape(Dist_bs))

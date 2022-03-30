@@ -4,7 +4,7 @@ import math
 import random
 
 
-def GetSecusers(nums, BS_locations_x, BS_locations_y):
+def GetSecusers(nums, BS_locations_x, BS_locations_y, X, Y):
   
   xy_all = np.zeros((3*nums, 2))
   for j in range(7):

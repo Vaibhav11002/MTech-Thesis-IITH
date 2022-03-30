@@ -55,4 +55,4 @@ def DirectivityGain(users_phi):
 
   return dir_gain
 
-  
+    

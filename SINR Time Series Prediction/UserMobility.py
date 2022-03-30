@@ -5,7 +5,7 @@ import random
 
 #Random Waypoint Model
 def User_Mobility(radius, total_user, xs, ys, v_min, v_max, Time_instants):
-  isd = 0.5*sqrt(3)*radius
+  isd = 0.5*math.sqrt(3)*radius
   # range of x and y coordinates for user mobility
   x_min = -2.25*radius
   x_max = 2.25*radius
