@@ -95,7 +95,8 @@ class BSGenerate:
 
 
         self.BS_location_x = [c_x1, c_x2, c_x3, c_x4, c_x5, c_x6, c_x7]    #centre, up, low, right up, right low, left up, left low
-        self.BS = [c_y1, c_y2, c_y3, c_y4, c_y5, c_y6, c_y7]
+        self.BS_location_y = [c_y1, c_y2, c_y3, c_y4, c_y5, c_y6, c_y7]
+        print(self.BS_location_y)
 
         X =np.array([x1,x2,x3,x4,x5,x6,x7])
         Y =np.array([y1,y2,y3,y4,y5,y6,y7])
