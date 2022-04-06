@@ -4,6 +4,8 @@ import math
 import random
 
 def SINR_b4(radius, channel_gain_matrix, BS_locations_x, BS_locations_y, BS_wrap_around_total3x, BS_wrap_around_total3y):
+
+  
   #e total transmit power of a BS, Ps = 46dBm
   #dBm to watts
   #Ps = 46dBm--->39.81071706W ---> 10log(39.81071706) = 16dB

@@ -36,6 +36,7 @@ def GetSecusers(nums, BS_locations_x, BS_locations_y, X, Y):
       count+=1
 
     #CLUB ALL Base station users
+    
     if(j==0):
       xy_all = p2
       angles_all = angles2

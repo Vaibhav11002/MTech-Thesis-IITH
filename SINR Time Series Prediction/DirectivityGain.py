@@ -29,6 +29,7 @@ def UserAngle(mobileuser_x, mobileuser_y, BS_totalx, BS_totaly):
 
 #phi calculation
 def FindPhi(user_angles):
+  
   user_angles = user_angles*180/math.pi   #radians to degree
   
   t, bs, users = np.shape(user_angles)

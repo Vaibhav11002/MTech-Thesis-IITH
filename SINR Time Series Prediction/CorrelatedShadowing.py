@@ -4,6 +4,7 @@ import math
 import random
 
 def correlated_shadowing(x_mobile, y_mobile, sigma_shd, BS_total_x, BS_total_y):
+    
     bs_wrap = 49
     D_cor = 100
     #sigma_shd = 100 #dB

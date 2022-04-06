@@ -9,5 +9,6 @@ def ChannelGainCalculation(pathloss, shadloss, directivity_gain): #Channel Gain 
     rchgain = - pathloss + directivity_gain - shadloss
     rchgain_lin = np.power(10, (rchgain)/10) #linear
 
+    
     return rchgain_lin
 

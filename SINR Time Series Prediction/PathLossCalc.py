@@ -116,6 +116,7 @@ def PathlossUMA(d_2d, d_3d):
 
 
 def PathLoss(dist2d, dist3d, n_users):
+  
   Dr_2d, Dr_3d = dist2d, dist3d
   
   PLr = np.zeros(np.shape(Dr_2d))
