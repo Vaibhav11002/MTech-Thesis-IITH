@@ -1,0 +1,8 @@
+
+Shad value 1
+x-axis -> speed
+y-axis -> rmse #for a particular speed 
+
+Fixed speed 
+x -> shadowing
+y -> rmse 
