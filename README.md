@@ -1,3 +1,3 @@
 # MTech-Thesis-IITH
-Thesis work on Time Series Prediction and CSI Compression. 
+IIT Hyderabad Masters Thesis work on Time Series Prediction and CSI Compression using Deep Learning. 
 
